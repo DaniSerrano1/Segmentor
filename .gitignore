@@ -1,0 +1,10 @@
+# Ignorar carpetas completas
+/Curvelanes/
+/logs/
+
+# Ignorar archivos específicos
+*.jpg
+*.json
+
+# Ignorar archivos de Python
+__pycache__/
