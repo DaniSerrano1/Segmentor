@@ -1,6 +1,7 @@
 # Ignorar carpetas completas
 /Curvelanes/
 /logs/
+/checkpoints/
 
 # Ignorar archivos específicos
 *.jpg

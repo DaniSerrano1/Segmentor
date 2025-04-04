@@ -66,8 +66,9 @@ if __name__ == "__main__":
     model = YOLOLineDetector(grid_size=args.grid_size, poly_degree=args.poly_degree, B=args.B).to(device)
 
     if args.resume_checkpoint:
-        print(f"Cargando checkpoint desde {args.resume_checkpoint}")
-        checkpoint = torch.load(args.resume_checkpoint, map_location=device)
+        checkpoint_path = os.path.join(WORKSPACE_PATH, args.resume_checkpoint)
+        print(f"Cargando checkpoint desde {checkpoint_path}")
+        checkpoint = torch.load(checkpoint_path, map_location=device)
         model.load_state_dict(checkpoint['model_state_dict'])
 
     optimizer = torch.optim.Adam(model.parameters(), lr=args.learning_rate)
